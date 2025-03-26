@@ -101,4 +101,6 @@ vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin" .. (is_windows and ";" or 
 -- Enable LSP
 vim.lsp.enable({'gopls', 'ruff', 'lua_ls'})
 
+vim.diagnostic.config({ virtual_text = true })
+
 require("lazy").setup("plugins")
