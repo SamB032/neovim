@@ -17,19 +17,6 @@ return {
                     },
                 },
             })
-
-            lspconfig.gopls.setup({
-                filetypes = { "go", "gomod", "gowork", "gotmpl" },
-                settings = {
-                    env = {
-                        GOEXPERIMENT = "rangefunc",
-                    },
-                    formatting = {
-                        gofumpt = true,
-                    },
-                },
-            })
-
         end,
     },
 }
