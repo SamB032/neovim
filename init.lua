@@ -98,4 +98,9 @@ vim.keymap.set("n", "sv", ":vsplit<Return>", { noremap = true, silent = true })
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin" .. (is_windows and ";" or ":") .. vim.env.PATH
 
+-- Enable LSP
+vim.lsp.enable({'gopls', 'ruff', 'lua_ls'})
+
+vim.diagnostic.config({ virtual_text = true })
+
 require("lazy").setup("plugins")
