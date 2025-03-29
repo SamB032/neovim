@@ -11,6 +11,7 @@ return {
         { "<leader>fb", builtin.buffers, desc = "Find Buffer" },
         { "<leader>fg", builtin.live_grep, desc = "Find with Grep" },
         { "<leader>fh", builtin.help_tags, desc = "Find Help" },
+        { "<leader>fs", builtin.lsp_document_symbols, desc = "Find LSP Symbols" },
         { "<leader>fn", function() vim.cmd(":Telescope file_browser path=%:p:help |select_buffer=true") end, desc = "File Browser" }
       })
     end,
